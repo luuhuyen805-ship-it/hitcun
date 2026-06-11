@@ -1,4 +1,4 @@
-import streamlit as st  # Khai báo chuẩn alias là 'st' để tránh xung đột với pandas
+import streamlit as st  # Sửa chính xác thành as st để không bị lỗi NameError hoặc xung đột với pandas
 import pandas as pd
 import numpy as np
 import plotly.express as px
@@ -113,7 +113,7 @@ if trigger_train:
         X = df_data[FEATURES]
         y = df_data[TARGET]
         
-        # Chia dữ liệu theo tỷ lệ huấn luyện/kiểm định chuẩn
+        # Chia dữ liệu theo tỷ lệ huấn luyện/kiểm định chuẩn từ notebook
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=32)
         
         # Khởi tạo thuật toán theo tham số chọn động trên UI
